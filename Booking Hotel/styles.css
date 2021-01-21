@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 120px;
+    height: 90px;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-image: url('bg2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 20px 20px 60px 20px;
+}
+
+.navbar {
+    display: flex;
+    background-color: #333;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+@media screen and (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+    }
+    footer {
+        display: none;
+    }
+}
+
+.gallery {
+    display: flex;
+    height: 100%;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+.gallery>div {
+    flex: 23%;
+    max-width: 25%;
+    margin: 1%;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.gallery>div a {
+    color: #333;
+}
+
+@media screen and (max-width: 1100px) {
+    .gallery>div {
+        flex: 48%;
+        max-width: 48%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .gallery>div {
+        flex: 98%;
+        max-width: 98%;
+    }
+}
+
+.gallery>div:hover {
+    opacity: 1;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    height: 60px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.book-now:link,
+.book-now:visited {
+    background-color: red;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.book-now:hover,
+.book-now:active {
+    background-color: red;
+}
